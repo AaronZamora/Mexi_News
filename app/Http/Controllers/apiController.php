@@ -32,6 +32,10 @@ class apiController extends Controller
         return $mex;
     }
 
+    public function jalar(){
+        return response()->json($this->apiNew());
+    }
+
     public function injectar(){
         return view('index', ['mex' => $this->apiNew()]);
     }
