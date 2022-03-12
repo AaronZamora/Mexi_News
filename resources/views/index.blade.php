@@ -90,29 +90,36 @@
 			<!-- Main -->
 			@foreach($mex as $value)
 
-				<div class="wrapper style2">
+				<div class="wrapper style1">
 
-					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="{{$value['urlToImage']}}" alt="" /></a>
-						<header>
-							<h2><a href="#">{{$value['title']}}</a></h2>
+					<div class="container">
+						<article id="main" class="special">
+							<header>
+								<h2><a href="#">{{$value['title']}}</a></h2>
+								<p>
+								{{$value['description']}}
+								</p>
+							</header>
+							<a href="#" class="image featured"><img src="{{$value['urlToImage']}}" alt="" /></a>
 							<p>
-							{{$value['description']}}
+								{{$value['content']}}
 							</p>
-						</header>
-						
-					</article>
-					<p>
-						{{$value['content']}}
-						</p>
+							<section>
+								<header>
+									<h3>Ultrices tempor sagittis nisl</h3>
+								</header>
+								<p>
+								{{$value['content']}}
+								</p>
+							</section>
+						</article>
+						<hr />
+					</div>
 
 				</div>
 
-				</div>
+			@endforeach
 
-				@endforeach
-
-			</div>
 
 			<!-- Features -->
 				<div class="wrapper style1">

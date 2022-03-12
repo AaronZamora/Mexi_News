@@ -27,15 +27,15 @@ class apiController extends Controller
                 'content' => $value['content']
             ];
         }
-        return view('index',['mex' => $mex]);
+        return $mex;
     }
 
     public function jalar(){
         return response()->json(['status' =>'ok', 'data' =>$this->apiNew()]);
     }
 
-    public function index(){
-        return view('index', ['data' =>$this->apiNew()]);
+    public function injectar(){
+        return view('index', ['mex' => $this->apiNew()]);
     }
 
     public function apiMiguel(){
