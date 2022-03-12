@@ -33,7 +33,7 @@ class apiController extends Controller
     }
 
     public function jalar(){
-        return response()->json(["status"=>"ok","data"=>$this->apiNews()]);
+        return response()->json(["status"=>"ok","data"=>$this->apiNew()]);
     }
 
     public function injectar(){
