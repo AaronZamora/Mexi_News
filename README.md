@@ -1,3 +1,1 @@
----------- URL de nuestra API ----------
-    http://mexi-news.herokuapp.com/
-----------------------------------------
+URL de nuestra API: http://mexi-news.herokuapp.com/
