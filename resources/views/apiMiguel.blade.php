@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Mexi News API</title>
+		<title>Api Miguel</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,9 +17,9 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Mexi News</a></h1>
+								<h1><a href="index.html" id="logo">Apis News</a></h1>
 								<hr />
-								<p>Donde te traemos las noticias como señoras de lavadero :D</p>
+								<p>Una api fea xd</p>
 							</header>
 							<footer>
 								<a href="#banner" class="button circled scrolly">Iniciar</a>
@@ -31,7 +31,7 @@
 							<ul>
 								<li><a href="{{route('index')}}">Mexi News</a></li>
 								<li><a href="{{route('apiMiguel')}}">Api Miguel</a></li>
-								<li><a href="{{route('apiMarco')}}">Api MarcoGod</a></li>
+								<li><a href="{{route('apiMarco')}}">Api Marco God</a></li>
 							</ul>
 						</nav>
 
@@ -40,7 +40,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2><strong>MexiNews.</strong></h2>
+						<h2><strong>Api News</strong></h2>
 						<p>
 							Aqui te mostraremos noticias tanto nacionales como internacionales.
 						</p>
@@ -51,9 +51,9 @@
 				<section class="carousel">
 					<div class="reel">
 
-						@foreach($mex as $value)
+						@foreach($news as $value)
 						<article>
-							<a href="#" class="image featured"><img src="{{$value['urlToImage']}}" /></a>
+							<a href="#" class="image featured"><img src="{{$value['urlToImage']}}" alt="" /></a>
 							<header>
 								<h3><a href="{{$value['url']}}" target="_blank">{{$value['title']}}</a></h3>
 							</header>
@@ -65,7 +65,7 @@
 
 
 			<!-- Main -->
-			@foreach($mex as $value)
+			@foreach($news as $value)
 
 				<div class="wrapper style1">
 					<div class="container">

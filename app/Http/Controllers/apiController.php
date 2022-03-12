@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class apiController extends Controller
 {
+
+    ///   Nuestra api :D
     public function apiNew(){
 
         $client = new \GuzzleHttp\Client();
@@ -30,14 +32,12 @@ class apiController extends Controller
         return $mex;
     }
 
-    public function jalar(){
-        return response()->json(['status' =>'ok', 'data' =>$this->apiNew()]);
-    }
-
     public function injectar(){
         return view('index', ['mex' => $this->apiNew()]);
     }
 
+
+    /////  Api de Miguel e Irvirgn
     public function apiMiguel(){
         $client = new \GuzzleHttp\Client();
         $response = $client->request('POST', 'https://apisnews.herokuapp.com/api/ver');
@@ -62,6 +62,30 @@ class apiController extends Controller
     }
 
     public function jalarMiguel(){
-        return view('jalarMiguel', ['news' => $this->apiMiguel()]);
+        return view('apiMiguel', ['news' => $this->apiMiguel()]);
+    }
+
+
+    ///   api Marco y la peso muerto :v
+    public function apiMarco(){
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', 'https://notideportes.herokuapp.com/api/apiDeporte1');
+        $data = json_decode($response->getBody()->getContents(), true);
+
+        $marc=[];
+
+        foreach($data['Deporte']as $value){
+            $marc[]=[
+                'title' => $value['titulo'],
+                'content' => $value['contenido'],
+                'autor' => $value['autor'],
+                'urlToImage' => $value['imagen'],
+            ];
+        }
+        return $marc;
+    }
+
+    public function jalarMarco(){
+        return view('apiMarco', ['marc' => $this->apiMarco()]);
     }
 }

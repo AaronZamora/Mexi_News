@@ -1795,6 +1795,7 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		
 		.image.featured {
 			display: block;
 			width: 100%;
@@ -2513,7 +2514,7 @@ input, select, textarea {
 
 		.carousel .forward, .carousel .backward {
 			position: absolute;
-			top: 50%;
+			top: 60%;
 			width: 6em;
 			height: 12em;
 			margin-top: -6em;

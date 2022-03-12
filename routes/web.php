@@ -14,6 +14,8 @@ use App\Http\Controllers\apiController;
 |
 */
 
-Route::get('/', [apiController::class, 'injectar'])-> name('apiNew');
+Route::get('/', [apiController::class, 'injectar'])-> name('index');
 
-//Route::get('/injectar',[apiController::class, 'index'])-> name('index');
+Route::get('/apiMiguel',[apiController::class, 'jalarMiguel'])-> name('apiMiguel');
+
+Route::get('/apiMarco',[apiController::class, 'jalarMarco'])-> name('apiMarco');
